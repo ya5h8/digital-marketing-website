@@ -49,6 +49,88 @@
       box-shadow: 0 6px 20px rgba(255, 122, 173, 0.8);
     }
 
+    .section-image {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      margin: 1.5rem 0;
+      transition: transform 0.3s ease;
+    }
+
+    .section-image:hover {
+      transform: scale(1.05);
+    }
+
+    .strategy-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .strategy-content {
+      text-align: center;
+      max-width: 600px;
+    }
+
+    @media (min-width: 768px) {
+      .strategy-section {
+        flex-direction: row;
+        text-align: left;
+      }
+
+      .strategy-content {
+        margin-left: 2rem;
+        text-align: left;
+      }
+    }
+
+    /* Scroll Stack Effect */
+    .strategy-section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .strategy-section.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .strategy-section:nth-child(even) {
+      transform: translateY(50px) translateX(-30px);
+    }
+
+    .strategy-section:nth-child(even).animate-in {
+      transform: translateY(0) translateX(0);
+    }
+
+    .strategy-section:nth-child(odd) {
+      transform: translateY(50px) translateX(30px);
+    }
+
+    .strategy-section:nth-child(odd).animate-in {
+      transform: translateY(0) translateX(0);
+    }
+
+    /* Staggered animation delays */
+    .strategy-section.animate-in:nth-child(1) { transition-delay: 0.1s; }
+    .strategy-section.animate-in:nth-child(2) { transition-delay: 0.2s; }
+    .strategy-section.animate-in:nth-child(3) { transition-delay: 0.3s; }
+    .strategy-section.animate-in:nth-child(4) { transition-delay: 0.4s; }
+    .strategy-section.animate-in:nth-child(5) { transition-delay: 0.5s; }
+    .strategy-section.animate-in:nth-child(6) { transition-delay: 0.6s; }
+    .strategy-section.animate-in:nth-child(7) { transition-delay: 0.7s; }
+    .strategy-section.animate-in:nth-child(8) { transition-delay: 0.8s; }
+    .strategy-section.animate-in:nth-child(9) { transition-delay: 0.9s; }
+    .strategy-section.animate-in:nth-child(10) { transition-delay: 1.0s; }
+    .strategy-section.animate-in:nth-child(11) { transition-delay: 1.1s; }
 
   </style>
 </head>
@@ -89,95 +171,207 @@
   </nav>
   <div class="container mt-5 pt-5">
     <!-- What is Digital Marketing -->
-    <h1>What is Digital Marketing?</h1>
-    <p>
-      Digital marketing refers to the creation and dissemination of content through digital media channels—websites, landing pages, social media, email, and mobile applications—and the promotion of that content using a variety of strategies across paid, earned, and owned digital channels, including SEO, SEM, pay-per-click (PPC) advertising, content syndication, social, email, text, and more.
-    </p>
-    <button class="btn-custom" onclick="showMessage()">Best Digital Marketing Platform</button>
-    <div id="video-message" style="display: none; margin-top: 2rem; padding: 2rem; background: #e9ecef; border-radius: 10px; text-align: center;">
-      <h3>Digital Marketing Video</h3>
-      <p>Check out our comprehensive digital marketing video tutorial!</p>
-      <p><strong>Note:</strong> Video content would be embedded here. Due to YouTube embedding restrictions, please visit our YouTube channel directly.</p>
+    <div class="strategy-section">
+      <img src="../images/digitalMarketing.png" alt="Digital Marketing" class="section-image">
+      <div class="strategy-content">
+        <h1>What is Digital Marketing?</h1>
+        <p>
+          Digital marketing refers to the creation and dissemination of content through digital media channels—websites, landing pages, social media, email, and mobile applications—and the promotion of that content using a variety of strategies across paid, earned, and owned digital channels, including SEO, SEM, pay-per-click (PPC) advertising, content syndication, social, email, text, and more.
+        </p>
+        <button class="btn-custom" onclick="toggleVideo()">Best Digital Marketing Platform</button>
+        <video id="local-video" controls style="width: 100%; height: 400px; margin-top: 2rem; border-radius: 10px; display: none;">
+          <source src="../images/Top 10 Digital Marketing Tools For 2025.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
 
     <!-- Importance of Digital Marketing -->
-    <h2>Importance of Digital Marketing</h2>
-    <p>
-      Digital marketing strategies help marketers define goals, target an audience, and develop a digital marketing plan that best reaches that audience. These strategies provide direction for a given campaign or program and a framework for evaluating outcomes.
-    </p>
-    <p>
-      Today, everything is digital, and digital marketing has been integrated into almost every aspect of business, fundamentally changing how companies communicate with and deliver value to customers.
-    </p>
-    <p>
-      So if your business cannot implement and execute a digital marketing strategy in an increasingly growing, global online marketplace, you simply will not be able to compete.
-    </p>
+    <div class="strategy-section">
+      <img src="../images/importantsofdigitalmarketing.png" alt="Importance of Digital Marketing" class="section-image">
+      <div class="strategy-content">
+        <h2>Importance of Digital Marketing</h2>
+        <p>
+          Digital marketing strategies help marketers define goals, target an audience, and develop a digital marketing plan that best reaches that audience. These strategies provide direction for a given campaign or program and a framework for evaluating outcomes.
+        </p>
+        <p>
+          Today, everything is digital, and digital marketing has been integrated into almost every aspect of business, fundamentally changing how companies communicate with and deliver value to customers.
+        </p>
+        <p>
+          So if your business cannot implement and execute a digital marketing strategy in an increasingly growing, global online marketplace, you simply will not be able to compete.
+        </p>
+      </div>
+    </div>
 
     <!-- Digital Marketing Strategies -->
-    <h2>Digital Marketing Strategies</h2>
-    <p>
-      Cross-channel marketing, multichannel marketing, omnichannel marketing, or whatever term you prefer, is all about engaging with your customer or prospect across every digital channel and any device. From the inbox to social networks—and across laptops, tablets, and smartphones—today’s consumers move seamlessly and fully expect you to be there with them, providing a seamless, integrated experience.
-    </p>
-    <p>To help you build a successful cross-channel marketing strategy, here are in-depth descriptions of the most widely used digital marketing channels:</p>
+    <div class="strategy-section">
+      <img src="../images/marketingstrategy.png" alt="Digital Marketing Strategies" class="section-image">
+      <div class="strategy-content">
+        <h2>Digital Marketing Strategies</h2>
+        <p>
+          Cross-channel marketing, multichannel marketing, omnichannel marketing, or whatever term you prefer, is all about engaging with your customer or prospect across every digital channel and any device. From the inbox to social networks—and across laptops, tablets, and smartphones—today’s consumers move seamlessly and fully expect you to be there with them, providing a seamless, integrated experience.
+        </p>
+        <p>To help you build a successful cross-channel marketing strategy, here are in-depth descriptions of the most widely used digital marketing channels:</p>
+      </div>
+    </div>
 
     <!-- Strategies List -->
-    <h3>Email Marketing</h3>
-    <p>
-      Email marketing is one of the oldest and best-known forms of digital marketing, used by B2B and B2C marketers alike. With email marketing, you collect customer data across various customer journey touchpoints, classify it to understand your potential customers’ preferences, and ultimately get permission to add them to your email list(s).
-    </p>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="strategy-section">
+          <img src="../images/emailmarketing.png" alt="Email Marketing" class="section-image">
+          <div class="strategy-content">
+            <h3>Email Marketing</h3>
+            <p>
+              Email marketing is one of the oldest and best-known forms of digital marketing, used by B2B and B2C marketers alike. With email marketing, you collect customer data across various customer journey touchpoints, classify it to understand your potential customers' preferences, and ultimately get permission to add them to your email list(s).
+            </p>
+          </div>
+        </div>
+      </div>
 
-    <h3>Video Marketing</h3>
-    <p>
-      Video is one of the most powerful digital marketing channels available. People love video. They watch videos for fun and research, and they share videos. In fact, YouTube reported more than two billion monthly logged-in viewers. Both B2B buyers and B2C consumers make buying decisions thanks to video.
-    </p>
+      <div class="col-md-6 mb-4">
+        <div class="strategy-section">
+          <img src="../images/videomarketing.png" alt="Video Marketing" class="section-image">
+          <div class="strategy-content">
+            <h3>Video Marketing</h3>
+            <p>
+              Video is one of the most powerful digital marketing channels available. People love video. They watch videos for fun and research, and they share videos. In fact, YouTube reported more than two billion monthly logged-in viewers. Both B2B buyers and B2C consumers make buying decisions thanks to video.
+            </p>
+          </div>
+        </div>
+      </div>
 
-    <h3>Social Media Marketing</h3>
-    <p>
-      Social media is a great way to reach a specific, targeted audience and connect directly with customers, potential customers, and partners. Which social media platform(s) you use depends on who you want to target.
-    </p>
+      <div class="col-md-6 mb-4">
+        <div class="strategy-section">
+          <img src="../images/socialmedia.png" alt="Social Media Marketing" class="section-image">
+          <div class="strategy-content">
+            <h3>Social Media Marketing</h3>
+            <p>
+              Social media is a great way to reach a specific, targeted audience and connect directly with customers, potential customers, and partners. Which social media platform(s) you use depends on who you want to target.
+            </p>
+          </div>
+        </div>
+      </div>
 
-    <h3>Text Messages (SMS and MMS)</h3>
-    <p>
-      Next to email marketing, text messaging is the most direct way to reach customers, but like social media, messages must be concise to be effective.
-    </p>
+      <div class="col-md-6 mb-4">
+        <div class="strategy-section">
+          <img src="../images/textmsgs.png" alt="Text Messages Marketing" class="section-image">
+          <div class="strategy-content">
+            <h3>Text Messages (SMS and MMS)</h3>
+            <p>
+              Next to email marketing, text messaging is the most direct way to reach customers, but like social media, messages must be concise to be effective.
+            </p>
+          </div>
+        </div>
+      </div>
 
-    <h3>Content Marketing</h3>
-    <p>
-      Content marketing lets you personalize your outreach to different prospects and customers as you present your message. The more personalized your content, the more likely it will interest, intrigue, and hold the person’s attention.
-    </p>
+      <div class="col-md-6 mb-4">
+        <div class="strategy-section">
+          <img src="../images/contentmarketing.png" alt="Content Marketing" class="section-image">
+          <div class="strategy-content">
+            <h3>Content Marketing</h3>
+            <p>
+              Content marketing lets you personalize your outreach to different prospects and customers as you present your message. The more personalized your content, the more likely it will interest, intrigue, and hold the person's attention.
+            </p>
+          </div>
+        </div>
+      </div>
 
-    <h3>SEO and PPC (or SEM)</h3>
-    <p>
-      A good search engine optimization (SEO) strategy optimizes website content (landing pages, blogs, etc.) so that it appears higher and more often in search results, driving traffic to your content.
-    </p>
+      <div class="col-md-6 mb-4">
+        <div class="strategy-section">
+          <img src="../images/seo_ppc.png" alt="SEO and PPC Marketing" class="section-image">
+          <div class="strategy-content">
+            <h3>SEO and PPC (or SEM)</h3>
+            <p>
+              A good search engine optimization (SEO) strategy optimizes website content (landing pages, blogs, etc.) so that it appears higher and more often in search results, driving traffic to your content.
+            </p>
+          </div>
+        </div>
+      </div>
 
-    <h3>Website Design and Marketing</h3>
-    <p>
-      Your website is often the first point of contact potential customers have with your company and brand. Great web design can promote the consistent branding of all digital assets.
-    </p>
+      <div class="col-md-6 mb-4">
+        <div class="strategy-section">
+          <img src="../images/Website Design and Marketing.png" alt="Website Design and Marketing" class="section-image">
+          <div class="strategy-content">
+            <h3>Website Design and Marketing</h3>
+            <p>
+              Your website is often the first point of contact potential customers have with your company and brand. Great web design can promote the consistent branding of all digital assets.
+            </p>
+          </div>
+        </div>
+      </div>
 
-    <h3>Affiliate Marketing</h3>
-    <p>
-      Many bloggers and social media influencers are affiliate marketers, as they use their blogs and social media accounts to promote different products and services.
-    </p>
+      <div class="col-md-6 mb-4">
+        <div class="strategy-section">
+          <img src="../images/Affiliate Marketing.png" alt="Affiliate Marketing" class="section-image">
+          <div class="strategy-content">
+            <h3>Affiliate Marketing</h3>
+            <p>
+              Many bloggers and social media influencers are affiliate marketers, as they use their blogs and social media accounts to promote different products and services.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    function showMessage() {
-      const message = document.getElementById("video-message");
-      if (message.style.display === "block") {
-        message.style.display = "none"; // Hide the message if already visible
+    function toggleVideo() {
+      const video = document.getElementById("local-video");
+      if (video.style.display === "block") {
+        video.style.display = "none"; // Hide the video if already visible
+        video.pause(); // Pause the video when hiding
       } else {
-        message.style.display = "block"; // Show the message
+        video.style.display = "block"; // Show the video
       }
     }
 
+    // Scroll Stack Effect Function
+    function handleScrollAnimations() {
+      const sections = document.querySelectorAll('.strategy-section');
+      const scrollTop = window.pageYOffset;
+      const windowHeight = window.innerHeight;
+
+      sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        // Trigger animation when section is 80% visible
+        if (scrollTop + windowHeight * 0.8 > sectionTop) {
+          setTimeout(() => {
+            section.classList.add('animate-in');
+          }, index * 100); // Stagger the animations
+        }
+      });
+    }
+
+    // Navbar scroll effect
     window.addEventListener("scroll", function () {
       const navbar = document.querySelector(".navbar");
       if (window.scrollY > 50) {
         navbar.classList.add("navbar-scrolled");
       } else {
         navbar.classList.remove("navbar-scrolled");
+      }
+
+      // Trigger scroll animations
+      handleScrollAnimations();
+    });
+
+    // Initial check for elements already in view
+    document.addEventListener('DOMContentLoaded', function() {
+      handleScrollAnimations();
+    });
+
+    // Throttle scroll events for better performance
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+      if (!scrollTimeout) {
+        scrollTimeout = setTimeout(function() {
+          handleScrollAnimations();
+          scrollTimeout = null;
+        }, 16); // ~60fps
       }
     });
   </script>
