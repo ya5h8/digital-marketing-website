@@ -1,28 +1,75 @@
+/* Body padding for fixed navbar */
+body {
+  padding-top: 70px;
+  background: #f8f9fa;
+  color: #333333;
+  
+}
+
 /* Navbar Styles */
-nav {
-  background-color: #333;
+.navbar {
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.navbar-brand {
+  color: #0077b6 !important;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #333333 !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00b4d8 !important;
+  text-decoration: underline;
+}
+
+/* Center navbar content */
+.navbar .container-fluid {
+  justify-content: center !important;
+}
+
+/* Center navbar items */
+.navbar-nav {
+  justify-content: center !important;
+  width: 100%;
+}
+
+.navbar-scrolled {
+  background: rgba(0, 119, 182, 0.9) !important;
+}
+
+.navbar-scrolled .navbar-brand,
+.navbar-scrolled .navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar-scrolled .navbar-nav .nav-link:hover {
+  color: #90e0ef !important;
+}
+
+/* Slider Styles */
+.slider {
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   overflow: hidden;
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+.slide {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-nav li {
-  float: left;
+.slide.active {
+  opacity: 1;
 }
 
-nav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-nav li a:hover {
-  background-color: #111;
-}

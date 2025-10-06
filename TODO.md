@@ -1,0 +1,5 @@
+- [x] Update index.html with Bootstrap navbar
+- [x] Update yash/about.html with Bootstrap navbar
+- [x] Update yash/jobs.html with Bootstrap navbar
+- [x] Update vaishnavi/link.html with Bootstrap navbar
+- [x] Update vaishnavi/contact.html with Bootstrap navbar
