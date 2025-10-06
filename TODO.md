@@ -1,5 +1,6 @@
-- [x] Update index.html with Bootstrap navbar
-- [x] Update yash/about.html with Bootstrap navbar
-- [x] Update yash/jobs.html with Bootstrap navbar
-- [x] Update vaishnavi/link.html with Bootstrap navbar
-- [x] Update vaishnavi/contact.html with Bootstrap navbar
+- [x] Fix CSS syntax error in style.css (navbar-brand letter-spacing).
+- [x] Add universal consistent navbar to all pages (index.html, yash/about.html, yash/jobs.html, vaishnavi/link.html, vaishnavi/contact.html) with correct relative paths.
+- [x] Fix "Learn More" button in index.html to link to yash/about.html instead of anchor.
+- [x] Ensure navbar transparency and scroll effects work across all pages.
+- [x] Remove "Our Digital Marketing Services" section from index.html home page.
+- [ ] Test the changes by running the site and verifying navigation.

@@ -3,14 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About</title>
-  <link rel="stylesheet" href="../style.css" />
+  <title>Digital Marketing</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    * {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 2rem;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #007bff;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .btn-custom {
+      display: inline-block;
+      font-size: 1.2rem;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff6a5e);
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 15px rgba(255, 122, 173, 0.5);
+    }
+
+    .btn-custom:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 122, 173, 0.8);
+    }
+
+
+  </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid justify-content-center">
-      <a class="navbar-brand" href="#">Digital Marketing</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -43,12 +87,91 @@
       </div>
     </div>
   </nav>
-  <main class="container mt-5 pt-5">
-    <h1>About Us</h1>
-    <p>This is the about page.</p>
-  </main>
+  <div class="container mt-5 pt-5">
+    <!-- What is Digital Marketing -->
+    <h1>What is Digital Marketing?</h1>
+    <p>
+      Digital marketing refers to the creation and dissemination of content through digital media channels—websites, landing pages, social media, email, and mobile applications—and the promotion of that content using a variety of strategies across paid, earned, and owned digital channels, including SEO, SEM, pay-per-click (PPC) advertising, content syndication, social, email, text, and more.
+    </p>
+    <button class="btn-custom" onclick="showMessage()">Best Digital Marketing Platform</button>
+    <div id="video-message" style="display: none; margin-top: 2rem; padding: 2rem; background: #e9ecef; border-radius: 10px; text-align: center;">
+      <h3>Digital Marketing Video</h3>
+      <p>Check out our comprehensive digital marketing video tutorial!</p>
+      <p><strong>Note:</strong> Video content would be embedded here. Due to YouTube embedding restrictions, please visit our YouTube channel directly.</p>
+    </div>
+
+    <!-- Importance of Digital Marketing -->
+    <h2>Importance of Digital Marketing</h2>
+    <p>
+      Digital marketing strategies help marketers define goals, target an audience, and develop a digital marketing plan that best reaches that audience. These strategies provide direction for a given campaign or program and a framework for evaluating outcomes.
+    </p>
+    <p>
+      Today, everything is digital, and digital marketing has been integrated into almost every aspect of business, fundamentally changing how companies communicate with and deliver value to customers.
+    </p>
+    <p>
+      So if your business cannot implement and execute a digital marketing strategy in an increasingly growing, global online marketplace, you simply will not be able to compete.
+    </p>
+
+    <!-- Digital Marketing Strategies -->
+    <h2>Digital Marketing Strategies</h2>
+    <p>
+      Cross-channel marketing, multichannel marketing, omnichannel marketing, or whatever term you prefer, is all about engaging with your customer or prospect across every digital channel and any device. From the inbox to social networks—and across laptops, tablets, and smartphones—today’s consumers move seamlessly and fully expect you to be there with them, providing a seamless, integrated experience.
+    </p>
+    <p>To help you build a successful cross-channel marketing strategy, here are in-depth descriptions of the most widely used digital marketing channels:</p>
+
+    <!-- Strategies List -->
+    <h3>Email Marketing</h3>
+    <p>
+      Email marketing is one of the oldest and best-known forms of digital marketing, used by B2B and B2C marketers alike. With email marketing, you collect customer data across various customer journey touchpoints, classify it to understand your potential customers’ preferences, and ultimately get permission to add them to your email list(s).
+    </p>
+
+    <h3>Video Marketing</h3>
+    <p>
+      Video is one of the most powerful digital marketing channels available. People love video. They watch videos for fun and research, and they share videos. In fact, YouTube reported more than two billion monthly logged-in viewers. Both B2B buyers and B2C consumers make buying decisions thanks to video.
+    </p>
+
+    <h3>Social Media Marketing</h3>
+    <p>
+      Social media is a great way to reach a specific, targeted audience and connect directly with customers, potential customers, and partners. Which social media platform(s) you use depends on who you want to target.
+    </p>
+
+    <h3>Text Messages (SMS and MMS)</h3>
+    <p>
+      Next to email marketing, text messaging is the most direct way to reach customers, but like social media, messages must be concise to be effective.
+    </p>
+
+    <h3>Content Marketing</h3>
+    <p>
+      Content marketing lets you personalize your outreach to different prospects and customers as you present your message. The more personalized your content, the more likely it will interest, intrigue, and hold the person’s attention.
+    </p>
+
+    <h3>SEO and PPC (or SEM)</h3>
+    <p>
+      A good search engine optimization (SEO) strategy optimizes website content (landing pages, blogs, etc.) so that it appears higher and more often in search results, driving traffic to your content.
+    </p>
+
+    <h3>Website Design and Marketing</h3>
+    <p>
+      Your website is often the first point of contact potential customers have with your company and brand. Great web design can promote the consistent branding of all digital assets.
+    </p>
+
+    <h3>Affiliate Marketing</h3>
+    <p>
+      Many bloggers and social media influencers are affiliate marketers, as they use their blogs and social media accounts to promote different products and services.
+    </p>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    function showMessage() {
+      const message = document.getElementById("video-message");
+      if (message.style.display === "block") {
+        message.style.display = "none"; // Hide the message if already visible
+      } else {
+        message.style.display = "block"; // Show the message
+      }
+    }
+
     window.addEventListener("scroll", function () {
       const navbar = document.querySelector(".navbar");
       if (window.scrollY > 50) {
