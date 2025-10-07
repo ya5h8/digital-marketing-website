@@ -5,21 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
     * {
-      font-family: "Poppins", sans-serif;
+      font-family: "Inter", sans-serif;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Hero Banner */
+    /* Navbar matching about.html */
+    .navbar {
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      padding: 1rem 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-scrolled {
+      background: rgba(255, 255, 255, 0.98) !important;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-link {
+      color: #2d3748 !important;
+      font-weight: 500;
+      padding: 0.5rem 1.5rem !important;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 80%;
+    }
+
+    .nav-link:hover {
+      color: #667eea !important;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Banner with gradient matching about.html theme */
     .hero-banner {
       position: relative;
       height: 100vh;
-      background: linear-gradient(120deg, #007bff, #6610f2, #28a745, #ffc107);
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       background-size: 400% 400%;
       animation: gradientShift 10s ease infinite;
       display: flex;
@@ -37,11 +81,23 @@
       100% { background-position: 0% 50%; }
     }
 
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><path d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/></g></g></svg>');
+      opacity: 0.3;
+      z-index: 1;
+    }
+
     .hero-banner::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.15);
       z-index: 1;
     }
 
@@ -55,32 +111,36 @@
 
     .hero-content h1 {
       font-size: 3.5rem;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 1.5rem;
       line-height: 1.3;
+      letter-spacing: -2px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 
     .hero-content p {
       font-size: 1.5rem;
       font-weight: 400;
       margin-bottom: 2.5rem;
+      opacity: 0.95;
+      line-height: 1.8;
     }
-
-
 
     /* Button with shine */
     .hero-content .btn {
       font-size: 1.2rem;
+      font-weight: 600;
       padding: 1rem 2.5rem;
       border-radius: 50px;
-      background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff6a5e);
-      color: #fff;
+      background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+      color: #667eea;
       text-decoration: none;
       transition: all 0.3s ease-in-out;
-      box-shadow: 0 4px 15px rgba(255, 122, 173, 0.5);
+      box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4);
       position: relative;
       overflow: hidden;
-      margin-top: 2rem; /* Ensures button is below the text */
+      margin-top: 2rem;
+      border: 2px solid rgba(255, 255, 255, 0.8);
     }
 
     .hero-content .btn::before {
@@ -90,7 +150,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(120deg, rgba(255, 255, 255, 0.6), transparent);
+      background: linear-gradient(120deg, rgba(102, 126, 234, 0.3), transparent);
       transition: 0.5s;
     }
 
@@ -99,8 +159,9 @@
     }
 
     .hero-content .btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(255, 122, 173, 0.8);
+      transform: scale(1.05) translateY(-3px);
+      box-shadow: 0 12px 40px rgba(255, 255, 255, 0.6);
+      background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
     }
 
     /* Sparks */
@@ -127,32 +188,23 @@
       100% { transform: translate(100px, 80px); opacity: 0; }
     }
 
-    /* Section */
-    #about {
-      background: #f8f9fa;
-    }
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
 
-    .card {
-      border: none;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-radius: 15px;
-    }
+      .hero-content p {
+        font-size: 1.1rem;
+      }
 
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+      .navbar {
+        padding: 1rem;
+      }
     }
-
-    .card img {
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-    }
-
   </style>
 </head>
 <body>
-  <!-- Centered Navbar -->
+  <!-- Navbar matching about.html -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid justify-content-center">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -180,11 +232,9 @@
     </div>
   </section>
 
-
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Sparks
+    // Sparks animation
     const sparksContainer = document.querySelector('.sparks');
     for (let i = 0; i < 60; i++) {
       const spark = document.createElement('div');
@@ -194,6 +244,16 @@
       spark.style.animationDelay = `${Math.random() * 3}s`;
       sparksContainer.appendChild(spark);
     }
+
+    // Navbar scroll effect
+    window.addEventListener("scroll", function () {
+      const navbar = document.querySelector(".navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("navbar-scrolled");
+      } else {
+        navbar.classList.remove("navbar-scrolled");
+      }
+    });
   </script>
 </body>
 </html>
