@@ -2,3 +2,6 @@
 - [ ] Add CSS for stack effect: Initial positions (off-screen left/right), keyframes for stacking animation, z-index for layering
 - [ ] Add JavaScript: Intersection Observer to detect when container is in view and trigger stack animation on cards
 - [ ] Test the scroll stack effect by scrolling the page and ensure it works on different screen sizes
+- [x] Replace local video in yash/about.html with YouTube embed from https://youtu.be/u1nn-dz6b1M
+- [x] Update CSS for video-container to style the iframe appropriately
+- [x] Test the YouTube video toggle and responsiveness
